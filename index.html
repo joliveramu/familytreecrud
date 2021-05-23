@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>Add Family</title>
+</head>
+<body class = "container-fluid">
+    <h1>Add a Family Member</h1>
+    <hr/>
+    <form method = "post" action="/Add" class = "form-group">
+       <label>Name</label><br/>
+       <input type = "text" name = "txtName" placeholder="Enter Name" class="form-control" required/><br/>
+       <label>Relationship</label><br/>
+       <select name = "cmbRelationship" class="form-control" required>
+           <option value ="">Select Relationship</option>
+           <option value = "Grand father">Grand Father</option>
+           <option value = "Grand mother">Grand Mother</option>
+           <option value = "Father">Father</option>
+           <option value = "Mother">Mother</option>
+           <option value = "Sister">Sister</option>
+           <option value = "Brother">Brother/option>
+           <option value = "Cousin">Cousin</option>
+           <option value = "Aunt">Aunt</option>
+           <option value = "Uncle">Uncle</option>
+           <option value = "Niece">Niece</option>
+           <option value = "Nephew">Nephew</option>
+           <option value = "Distant Relative">Distant Relative</option>
+       </select> 
+       <br/>
+       <br/>
+        <button type = "submit" class = "btn btn-success">Add User</button>
+    </form>
+    <br/>
+    <a href = "/Families" class = "btn btn-primary">Display Family tree</a>
+</body>
+</html>

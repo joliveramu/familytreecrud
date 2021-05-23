@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>Member Info</title>
+</head>
+<body class = "container-fluid">
+    <h2>Family Tree</h2>
+    <a href = "/">Return to home</a>
+    <hr/>
+    <table class = "table">
+        <tr>
+            <th>Name</th>
+            <th>Relationship</th>
+            <th>Options</th>
+        </tr>
+        <%
+        if(userData.length!=0){
+        var i=1;
+        userData.forEach(function(data){
+        %>
+        <tr>
+            <td><%=data.name %></td>
+            <td><%=data.relationship %></td>
+            <td><a href="/FamiliesInfo/<%=data.FamilyID%>" class = "btn btn-info">Edit Information</a></td>
+        </tr>
+        <%  i++; }) %>
+        <% } else{ %>
+            <tr>
+                <td colspan="7" class = "table table-info">No Data Found</td>
+            </tr>
+        <% } %>
+    </table>
+</body>
+</html>
